@@ -34,3 +34,13 @@ scene.add(mesh);
 - `Mesh` is an object that takes a geometry, and applies a material to it, which we then can insert to our scene and move freely around.
 ### Camera
 - `Camera` is a tool that allows us to see the scene. Camera is not visible it more like a theoretical point of view.
+- To create the camera, we use the `PerspectiveCamera` class with 4 parameters: *field of view*, *aspect ratio*, *near* and *far*.
+```js
+// Sizes
+const sizes = {
+    width: 800,
+    height: 600
+}
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
+scene.add(camera);
+```
